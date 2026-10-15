@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>உழவன் வழிகாட்டி – தமிழ்நாடு பயிர் பரிந்துரை</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<h1>🌾 உழவன் வழிகாட்டி</h1>
+<p>உங்கள் மாவட்ட காலநிலைக்கு ஏற்ற பயிர்களைத் தெரிந்துகொள்ளுங்கள்</p>
+</header>
+<nav id="nav"></nav>
+<main>
+<div class="pg" id="p0">
+<section class="card hero"><h2>🌾 உங்கள் நிலத்துக்கு ஏற்ற பயிர் எது?</h2>
+<p>தமிழ்நாட்டின் 38 மாவட்டங்களின் காலநிலையை ஆய்வு செய்து, உங்கள் மண், பருவம், நீர்வசதிக்கு ஏற்ற பயிர்களைப் பரிந்துரைக்கும் இலவச தமிழ் இணையதளம்.</p>
+<button onclick="go(1)">தொடங்கு ▶</button></section>
+<div class="feat"><div>📍 <b>மாவட்ட வாரியான ஆய்வு</b><br>7 வேளாண் காலநிலை மண்டலங்கள்</div><div>🌱 <b>16 பயிர்கள்</b><br>பொருத்த சதவீதத்துடன் பரிந்துரை</div><div>✅ <b>காரணங்களுடன்</b><br>ஏன் இந்தப் பயிர் என்று விளக்கம்</div></div>
+</div>
+<div class="pg" id="p1">
+<section class="card">
+<h2>உங்கள் விவரங்களைத் தேர்வு செய்யுங்கள்</h2>
+<div class="grid">
+<div><label for="d">மாவட்டம்</label><select id="d"></select></div>
+<div><label for="s">பருவம்</label><select id="s"></select></div>
+<div><label for="m">மண் வகை</label><select id="m"></select></div>
+<div><label for="w">நீர்ப்பாசன வசதி</label><select id="w"></select></div>
+</div>
+<button id="go">பயிர் பரிந்துரையைப் பார்</button>
+</section>
+<section id="out" class="hide">
+<div class="card" id="climate"></div>
+<div class="card"><h2>🌱 பரிந்துரைக்கப்படும் பயிர்கள்</h2><div id="list"></div>
+<p class="note">குறிப்பு: இது பொதுவான காலநிலை அடிப்படையிலான பரிந்துரை. விதைப்பதற்கு முன் உங்கள் அருகிலுள்ள வேளாண்மை விரிவாக்க மையத்தில் மண் பரிசோதனை செய்து ஆலோசனை பெறவும்.</p></div>
+</section>
+</div>
+<div class="pg" id="p2"><section class="card"><h2>தமிழ்நாட்டின் 7 வேளாண் காலநிலை மண்டலங்கள்</h2><div class="zones" id="zl"></div></section></div>
+<div class="pg" id="p3"><section class="card"><h2>🌾 பயிர்களின் விவரம்</h2><div class="tw"><table id="ct"></table></div></section></div>
+<div class="pg" id="p4"><section class="card"><h2>ℹ️ திட்டம் பற்றி</h2>
+<p>இது ஒரு கல்லூரித் திட்டப்பணி. தமிழ்நாட்டு விவசாயிகளுக்கு, அவர்களின் மாவட்டக் காலநிலைக்கு ஏற்ற பயிர்களை எளிய தமிழில் பரிந்துரைப்பதே நோக்கம்.</p>
+<h2>எப்படி வேலை செய்கிறது?</h2>
+<ol><li>மாவட்டம், பருவம், மண், நீர்வசதி தேர்வு.</li><li>மாவட்டம் → 7 மண்டலங்களில் ஒன்றாக மாற்றம்.</li><li>16 பயிர்களுக்கும் 10-க்கு மதிப்பெண்: மண்டலம் 4, மண் 2, நீர் 2, பருவம் 2.</li><li>அதிக மதிப்பெண் உள்ள 4 பயிர்கள் காரணங்களுடன் காட்டப்படும்.</li></ol>
+<h2>பயன்படுத்திய கருவிகள்</h2><p>HTML, CSS, JavaScript, Noto Sans Tamil, GitHub, GitHub Pages.</p>
+<p class="note">இது பொது மாதிரித் தரவு அடிப்படையிலான வழிகாட்டுதல். இறுதி முடிவுக்கு வேளாண்மை விரிவாக்க மையத்தை அணுகவும்.</p></section></div>
+<div id="pager"><button id="pv" onclick="go(cur-1)">◀ முந்தையது</button><button id="nx" onclick="go(cur+1)">அடுத்தது ▶</button></div>
+</main>
+<footer>கல்லூரி திட்டப்பணி – தமிழ்நாடு விவசாயிகளுக்கான பயிர் பரிந்துரை அமைப்பு</footer>
+<script src="script.js"></script>
+</body>
+</html>
